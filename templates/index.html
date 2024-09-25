@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>顔検出と画像重ね合わせ</title>
+</head>
+<body>
+    <h1>画像をアップロードしてください</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <input type="submit" value="アップロード">
+    </form>
+    {% if result %}
+    <h2>結果:</h2>
+    <img src="data:image/jpeg;base64,{{ result }}" width="600">
+    {% endif %}
+</body>
+</html>
+
+
+
